@@ -21,3 +21,4 @@ npm start
 * ```i``` to hide the info tooltip
 * ```+``` to zoom in
 * ```-``` to zoom out
+* ```p``` to freeze the image
