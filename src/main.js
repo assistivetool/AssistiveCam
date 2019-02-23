@@ -22,20 +22,6 @@ feed.addEventListener('loadedmetadata', function() {
     canvas.height = feed.videoHeight;
 });
 
-// First, get all the available video capture devices
-navigator.mediaDevices.enumerateDevices().then(function(devices){
-    for(var i = 0; i < devices.length; i++){
-        var device = devices[i];
-        if(device.kind == "videoinput"){
-            console.log("Will use device " + device.label);
-            mediaDeviceId = device.deviceId;
-            break; // We currently only need one
-        }
-    }
-
-    startStream(mediaDeviceId);
-});
-
 function startStream(device){
     // Make sure UserMedia is supported
     if(navigator.mediaDevices.getUserMedia){
