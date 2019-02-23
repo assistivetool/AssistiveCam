@@ -4,25 +4,6 @@ const canvas = document.getElementById('manipulatedVideo');
 const ctx = canvas.getContext('2d');
 var mediaDeviceId = "";
 
-// All available filters
-const filters = ["default", "grayscale", "sepia", "high-contrast", "inverted", "very-bright", "low-light"];
-var selectedFilter = 0;
-
-// Listen for key presses in order to react to them
-document.addEventListener('keydown', function(event){
-    if(event.keyCode == 70){ //f for Filter
-        // Get the next filter
-        if((selectedFilter + 1) > filters.length){
-            selectedFilter = 0;
-        } else {
-            selectedFilter += 1;
-        }
-
-        nextFilter = filters[selectedFilter];
-        canvas.className = "viewer " + nextFilter;
-    }
-});
-
 // Project the video content onto the canvas
 // Probably also a very inefficient way to handle this
 feed.addEventListener('play', function() {
@@ -34,6 +15,12 @@ feed.addEventListener('play', function() {
     }
   })();
 }, 0);
+
+// Adjust canvas size when the video is loaded
+feed.addEventListener('loadedmetadata', function() {
+    canvas.width = feed.videoWidth;
+    canvas.height = feed.videoHeight;
+});
 
 // First, get all the available video capture devices
 navigator.mediaDevices.enumerateDevices().then(function(devices){
