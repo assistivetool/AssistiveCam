@@ -22,3 +22,4 @@ npm start
 * ```+``` to zoom in
 * ```-``` to zoom out
 * ```p``` to freeze the image
+* ```s``` to instantly save a snapshot of the current canvas (without effects)

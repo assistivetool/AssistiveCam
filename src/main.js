@@ -1,3 +1,8 @@
+const fs = require('fs');
+var path = require('path');
+
+var appDirectory = path.dirname(require.main.filename);
+
 const feed = document.getElementById("videofeed");
 const infoText = document.getElementById("info");
 const canvas = document.getElementById('manipulatedVideo');
