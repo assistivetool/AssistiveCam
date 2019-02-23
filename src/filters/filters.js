@@ -23,5 +23,8 @@ document.addEventListener('keydown', function(event){
         nextFilter = filters[selectedFilter];
         // Apply the filter to the canvas
         canvas.className = "viewer " + nextFilter;
+
+        // Show the filter name in infoText
+        infoText.innerHTML = nextFilter;
     }
 });

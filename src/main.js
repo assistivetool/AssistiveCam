@@ -1,5 +1,5 @@
 const feed = document.getElementById("videofeed");
-const errorDisplay = document.getElementById("info");
+const infoText = document.getElementById("info");
 const canvas = document.getElementById('manipulatedVideo');
 const ctx = canvas.getContext('2d');
 var mediaDeviceId = "";
@@ -57,7 +57,7 @@ function startStream(device){
         // Tell the user about a possible error
         .catch(function (error){
             console.error(error);
-            errorDisplay.innerHTML = "Last error - " + error;
+            infoText.innerHTML = "Last error - " + error;
         });
     } else {
         console.error("navigator.mediaDevices.getUserMedia doesn't seem to be supported by this browser.");
