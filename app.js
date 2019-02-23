@@ -13,7 +13,7 @@ function createWindow() {
     win.on("closed", () => {
         // Dereference the window object
         win = null
-    })
+    });
 }
 
 app.on("ready", createWindow)
