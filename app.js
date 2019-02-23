@@ -3,16 +3,16 @@ const {app, BrowserWindow} = require("electron")
 // Global window reference
 let win
 
-function createWindow () {
+function createWindow() {
     win = new BrowserWindow({ 
         width: 1280,
         height: 720
     })
-    win.loadFile("index.html")
+    win.loadFile("src/index.html")
     win.webContents.openDevTools()
     win.on("closed", () => {
-      // Dereference the window object
-      win = null
+        // Dereference the window object
+        win = null
     })
 }
 
@@ -20,7 +20,11 @@ app.on("ready", createWindow)
 
 // Quit when all windows are closed.
 app.on("window-all-closed", () => {
-    if(process.platform !== "darwin") {
-      app.quit()
+    app.quit()
+})
+
+app.on("activate", () => {
+    if(win === null) {
+        createWindow()
     }
 })
