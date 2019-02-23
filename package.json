@@ -1,0 +1,23 @@
+{
+  "name": "assistivecam",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "electron": "^4.0.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/assistivetool/AssistiveCam.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/assistivetool/AssistiveCam/issues"
+  },
+  "homepage": "https://github.com/assistivetool/AssistiveCam#readme"
+}
