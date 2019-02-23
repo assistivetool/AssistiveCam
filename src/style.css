@@ -3,6 +3,10 @@
     height: 100%;
 }
 
+.invisible {
+    display: none;
+}
+
 body {
     font-family: sans-serif;
     background-color: black;
