@@ -29,7 +29,7 @@ function cycleCamera(){
 
 // Listen for key presses in order to react to them
 document.addEventListener('keydown', function(event){
-    if(event.keyCode = 67){ // c, for camera
+    if(event.keyCode == 67){ // c, for camera
         cycleCamera();
     }
 });

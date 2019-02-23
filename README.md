@@ -1,3 +1,21 @@
 # AssistiveCam
 
-Electron based camera viewer released under the [MIT License.](LICENSE)
+Electron based camera viewer released under the [MIT License](LICENSE) designed for usage only with keyboard shortcuts, so the camera image always takes up most of your precious screen space.
+
+## Installation and usage
+
+AssistiveCam requires nodejs, npm and electron to be installed on your computer. I strive to use as few third-party libraries as absolutely needed for this project.
+
+```
+git clone https://github.com/assistivetool/assistivecam/
+cd assistivecam
+npm install
+npm start
+```
+
+## Shortcuts
+
+* ```f``` to cycle through built-in image filters
+* ```c``` to cycle through all available cameras
+* ```r``` to rotate by 90 degrees
+* ```i``` to hide the info tooltip
