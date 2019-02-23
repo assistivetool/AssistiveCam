@@ -19,3 +19,5 @@ npm start
 * ```c``` to cycle through all available cameras
 * ```r``` to rotate by 90 degrees
 * ```i``` to hide the info tooltip
+* ```+``` to zoom in
+* ```-``` to zoom out
