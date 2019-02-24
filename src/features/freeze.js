@@ -5,8 +5,12 @@ function toggleFreeze(duration = -1){
         feed.pause();
         inFreeze = true;
         if(duration > 0){
+            // Unfreeze in the given amount of milliseconds
             window.setTimeout(function(){
-                toggleFreeze();
+                // Only unfreeze when we're in freeze
+                if(inFreeze == true){
+                    toggleFreeze();
+                }
             }, duration);
         }
     } else {
