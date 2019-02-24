@@ -77,7 +77,8 @@ function executeCommand(action){
                         cycleFilter();
                     break;
                     default:
-                        // TODO
+                        var filter = command[1];
+                        applyFilter(filter);
                     break;
                 }
             break;
