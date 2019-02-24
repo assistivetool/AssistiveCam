@@ -10,10 +10,3 @@ function toggleInfoTextVisibility(){
         infoVisible = true;
     }
 }
-
-// Listen for key presses in order to react to them
-document.addEventListener('keydown', function(event){
-    if(event.keyCode == 73){ // i, for info
-        toggleInfoTextVisibility();
-    }
-});

@@ -24,17 +24,6 @@ function saveSnapshot(){
 
     // Write to disk
     fs.writeFile(filename, binaryData, "binary", function(err) {
-        console.log(err); // writes out file without error, but it's not a valid image
+        console.log(err);
     });
 }
-
-// Listen for key presses in order to react to them
-document.addEventListener('keydown', function(event){
-    if(event.keyCode == 80){ // p, for picture
-        toggleFreeze();
-    }
-
-    if(event.keyCode == 83){ // s, for snapshot
-        saveSnapshot();
-    }
-});

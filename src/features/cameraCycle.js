@@ -26,10 +26,3 @@ function cycleCamera(){
     newDevice = availableDevices[activeDevice];
     startStream(newDevice);
 }
-
-// Listen for key presses in order to react to them
-document.addEventListener('keydown', function(event){
-    if(event.keyCode == 67){ // c, for camera
-        cycleCamera();
-    }
-});

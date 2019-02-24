@@ -15,6 +15,12 @@
     bottom: 0;
 }
 
+#command {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
 body {
     font-family: sans-serif;
     background-color: black;

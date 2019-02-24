@@ -25,10 +25,3 @@ function cycleFilter(){
     // Show the filter name in infoText
     infoText.innerHTML = nextFilter;
 }
-
-// Listen for key presses in order to react to them
-document.addEventListener('keydown', function(event){
-    if(event.keyCode == 70){ //f for Filter
-        cycleFilter();
-    }
-});

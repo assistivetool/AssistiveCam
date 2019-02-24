@@ -1,4 +1,5 @@
 const {app, BrowserWindow} = require("electron");
+const path = require("path");
 
 // Global window reference
 let win;
@@ -6,7 +7,8 @@ let win;
 function createWindow() {
     win = new BrowserWindow({ 
         width: 1280,
-        height: 720
+        height: 720,
+        icon: path.join(__dirname, "assets/icon.png")
     });
     win.setMenu(null);
     win.loadFile("src/index.html");

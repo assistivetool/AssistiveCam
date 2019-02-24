@@ -7,6 +7,9 @@
 
     <!-- Include the filters -->
     <link rel="stylesheet" href="filters/filters.css">
+
+    <!-- Load the configuration -->
+    <script type="text/javascript" src="config.js"></script>
 </head>
 
 <body>
@@ -19,16 +22,25 @@
     <!-- Place to display error messages etc. -->
     <div id="info">AssistiveCam</div>
 
+    <!-- Command box -->
+    <div id="command">
+        <input type="text" class="" placeholder="Enter command" />
+    </div>
+    
+
     <!-- Load the main components and initialise -->
     <script type="text/javascript" src="main.js"></script>
-    <script type="text/javascript" src="cameraCycle.js"></script>
+    <script type="text/javascript" src="features/cameraCycle.js"></script>
 
     <!-- Load additional components -->
     <script type="text/javascript" src="filters/filters.js"></script>
-    <script type="text/javascript" src="toggleInfoVisibility.js"></script>
-    <script type="text/javascript" src="rotateCamera.js"></script>
-    <script type="text/javascript" src="zoom.js"></script>
-    <script type="text/javascript" src="freeze.js"></script>
+    <script type="text/javascript" src="features/toggleInfoVisibility.js"></script>
+    <script type="text/javascript" src="features/rotateCamera.js"></script>
+    <script type="text/javascript" src="features/zoom.js"></script>
+    <script type="text/javascript" src="features/freeze.js"></script>
+
+    <!-- Load the command executor -->
+    <script type="text/javascript" src="commandExecutor.js"></script>
 </body>
 
 </html>

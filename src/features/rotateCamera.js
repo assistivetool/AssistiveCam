@@ -10,10 +10,3 @@ function rotate90deg(){
     canvas.style = "transform: rotate(" + newRotation + "deg)";
     imageRotation = newRotation;
 }
-
-// Listen for key presses in order to react to them
-document.addEventListener('keydown', function(event){
-    if(event.keyCode == 82){ // r, for rotate
-        rotate90deg();
-    }
-});
