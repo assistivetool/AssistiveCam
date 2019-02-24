@@ -40,7 +40,11 @@ function executeCommand(action){
             break;
             case "fr":
             case "freeze":
-                toggleFreeze();
+                if(command[1]){
+                    toggleFreeze(command[1]);
+                } else {
+                    toggleFreeze(-1);
+                }
             break;
             case "snap":
             case "snapshot":

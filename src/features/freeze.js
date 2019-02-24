@@ -1,9 +1,14 @@
 var inFreeze = false;
 
-function toggleFreeze(){
+function toggleFreeze(duration = -1){
     if(inFreeze == false){
         feed.pause();
         inFreeze = true;
+        if(duration > 0){
+            window.setTimeout(function(){
+                toggleFreeze();
+            }, duration);
+        }
     } else {
         feed.play();
         inFreeze = false;
@@ -26,4 +31,6 @@ function saveSnapshot(){
     fs.writeFile(filename, binaryData, "binary", function(err) {
         console.log(err);
     });
+
+    infoText.innerHTML = "Snapshot saved";
 }

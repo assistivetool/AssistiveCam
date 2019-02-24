@@ -7,6 +7,8 @@ function changeZoomLevel(level){
     infoText.innerHTML = "Zoom level: " + zoomLevel;
 }
 
+
+// Safe features
 function zoomIn(){
     var defaultLevel = config["defaults"]["in"];
     var newZoomLevel = zoomLevel + defaultLevel;
