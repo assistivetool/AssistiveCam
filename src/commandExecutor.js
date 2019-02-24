@@ -83,7 +83,11 @@ function executeCommand(action){
             break;
             case "l":
             case "line":
-                toggleLineVisibility();
+                if(command[1]){
+                    changeLinePosition(command[1]);
+                } else {
+                    toggleLineVisibility();
+                }
                 break;
             default:
                 infoText.innerHTML = "Command " + command[0] + " not found!";

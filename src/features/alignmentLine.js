@@ -1,4 +1,4 @@
-var lineVisible = true;
+var lineVisible = false;
 
 function toggleLineVisibility(){
     // Toggle the visibility of the line
@@ -9,4 +9,8 @@ function toggleLineVisibility(){
         line.className = "";
         lineVisible = true;
     }
+}
+
+function changeLinePosition(position = 50){
+    line.style = "bottom: " + position + "%";
 }
