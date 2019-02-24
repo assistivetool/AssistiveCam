@@ -13,7 +13,8 @@ var config = {
         "c": "camera cycle",
         "p": "freeze",
         "f": "filter cycle",
-        ":": "command"
+        ":": "command",
+        "l": "line"
     },
     "keys": {
         "abort": "Escape",

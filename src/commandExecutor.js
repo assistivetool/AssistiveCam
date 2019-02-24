@@ -81,6 +81,10 @@ function executeCommand(action){
                     break;
                 }
             break;
+            case "l":
+            case "line":
+                toggleLineVisibility();
+                break;
             default:
                 infoText.innerHTML = "Command " + command[0] + " not found!";
                 console.error("Unknown command " + command[0]);

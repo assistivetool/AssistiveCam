@@ -24,6 +24,7 @@ npm start
 * ```-``` to zoom out
 * ```p``` to freeze the image
 * ```s``` to instantly save a snapshot of the current canvas (without effects)
+* ```l``` to toggle an alignment help
 
 ## List of commands
 

@@ -1,9 +1,12 @@
 const fs = require('fs');
 
+// Get all page elements
 const feed = document.getElementById("videofeed");
 const infoText = document.getElementById("info");
 const canvas = document.getElementById('manipulatedVideo');
 const commandBox = document.getElementById('command');
+const line = document.getElementById('line');
+
 const ctx = canvas.getContext('2d');
 var mediaDeviceId = "";
 
