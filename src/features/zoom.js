@@ -9,7 +9,7 @@ function changeZoomLevel(level){
 
 function zoomIn(){
     var defaultLevel = config["defaults"]["in"];
-    newZoomLevel = zoomLevel + defaultLevel;
+    var newZoomLevel = zoomLevel + defaultLevel;
     // Increase the zoom only until a specified maximum level
     if(newZoomLevel <= config["defaults"]["max"]){
         changeZoomLevel(newZoomLevel);
@@ -18,7 +18,7 @@ function zoomIn(){
 
 function zoomOut(){
     var defaultLevel = config["defaults"]["out"];
-    newZoomLevel = zoomLevel - defaultLevel;
+    var newZoomLevel = zoomLevel - defaultLevel;
     // Decrase the zoom only until a specified minimum level
     if(newZoomLevel >= 1){
         changeZoomLevel(newZoomLevel);

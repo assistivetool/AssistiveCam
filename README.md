@@ -1,6 +1,6 @@
 ![AssistiveCam logo](assets/logo.png)
 
-Electron based camera viewer released under the [MIT License](LICENSE) designed for usage only with keyboard shortcuts, so the camera image always takes up most of your precious screen space.
+Electron based camera viewer released under the [MIT License](LICENSE) designed for usage only with keyboard shortcuts or commands, so the camera image always takes up most of your precious screen space.
 
 ## Installation and usage
 
@@ -15,6 +15,7 @@ npm start
 
 ## Shortcuts
 
+* ```:``` to bring up a command prompt, like in the vim editor
 * ```f``` to cycle through built-in image filters
 * ```c``` to cycle through all available cameras
 * ```r``` to rotate by 90 degrees
@@ -23,3 +24,7 @@ npm start
 * ```-``` to zoom out
 * ```p``` to freeze the image
 * ```s``` to instantly save a snapshot of the current canvas (without effects)
+
+## List of commands
+
+To see an up-to-date list of example commands, check out [the defaults & config file!](src/config.js)

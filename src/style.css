@@ -18,7 +18,8 @@
 #command {
     position: fixed;
     width: 100%;
-    bottom: 0;
+    top: 0;
+    font-size: 6em;
 }
 
 body {

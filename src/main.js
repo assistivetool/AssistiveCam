@@ -3,6 +3,7 @@ const fs = require('fs');
 const feed = document.getElementById("videofeed");
 const infoText = document.getElementById("info");
 const canvas = document.getElementById('manipulatedVideo');
+const commandBox = document.getElementById('command');
 const ctx = canvas.getContext('2d');
 var mediaDeviceId = "";
 

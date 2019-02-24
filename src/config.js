@@ -13,6 +13,6 @@ var config = {
         "c": "camera cycle",
         "p": "freeze",
         "f": "filter cycle",
-        ":": "command toggle"
+        ":": "command"
     }
 }
