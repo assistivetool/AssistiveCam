@@ -14,5 +14,9 @@ var config = {
         "p": "freeze",
         "f": "filter cycle",
         ":": "command"
+    },
+    "keys": {
+        "abort": "Escape",
+        "send": "Enter"
     }
 }
