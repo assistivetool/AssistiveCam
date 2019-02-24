@@ -1,4 +1,4 @@
-# AssistiveCam
+![AssistiveCam logo](assets/logo.png)
 
 Electron based camera viewer released under the [MIT License](LICENSE) designed for usage only with keyboard shortcuts, so the camera image always takes up most of your precious screen space.
 
