@@ -9,7 +9,7 @@
 }
 
 #info {
-    font-size: 6em;
+    font-size: 2em;
     color: white;
     position: fixed;
     bottom: 0;
@@ -19,7 +19,7 @@
     position: fixed;
     width: 100%;
     top: 0;
-    font-size: 6em;
+    font-size: 2em;
 }
 
 #line {
