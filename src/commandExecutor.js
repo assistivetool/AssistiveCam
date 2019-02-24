@@ -76,9 +76,8 @@ function executeCommand(action){
                     case "cycle":
                         cycleFilter();
                     break;
-                    default:
-                        var filter = command[1];
-                        applyFilter(filter);
+                    default:;
+                        applyFilter(command[1]);
                     break;
                 }
             break;

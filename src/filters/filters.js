@@ -27,10 +27,10 @@ function applyFilter(filter){
 function cycleFilter(){
     // Get the next filter, avoid doing the first one twice
     if((selectedFilter + 1) >= filters.length){
-        selectedFilter = 0;
+        nextFilter = 0;
     } else {
-        selectedFilter += 1;
+        nextFilter = selectedFilter + 1;
     }
 
-    applyFilter(filters[selectedFilter]);
+    applyFilter(nextFilter);
 }
