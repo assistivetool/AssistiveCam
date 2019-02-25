@@ -6,7 +6,7 @@
     filter: sepia(100%);
 }
 
-.high-contast {
+.high-contrast {
     filter: contrast(150%);
 }
 

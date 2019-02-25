@@ -14,13 +14,14 @@ function executeCommand(action){
                             
         // Try to perform the action
         switch(command[0]){
+            // Toggle the command box
             case "command":
-                // Toggle the command box
                 commandBoxActive = true;
                 commandBox.className = "";
                 commandBox.focus();
                 commandBox.value = ""; // Clear
             break;
+            // Zoom
             case "z":
             case "zoom":
                 switch(command[1]){
@@ -38,6 +39,7 @@ function executeCommand(action){
                     break;
                 }
             break;
+            // Freeze the image
             case "fr":
             case "freeze":
                 if(command[1]){
@@ -46,13 +48,16 @@ function executeCommand(action){
                     toggleFreeze(-1);
                 }
             break;
+            // Save a snapshot
             case "snap":
             case "snapshot":
                 saveSnapshot();
             break;
+            // Rotate the image by 90 degrees
             case "rotate":
                 rotate90deg();
             break;
+            // Cycle through the available cameras
             case "c":
             case "camera":
                 switch(command[1]){
@@ -65,10 +70,12 @@ function executeCommand(action){
                     break;
                 }
             break;
+            // Hide or show the info text
             case "i":
             case "toggleinfo":
                 toggleInfoTextVisibility();
             break;
+            // Apply a filter or cycle through the list
             case "f":
             case "filter":
                 switch(command[1]){
@@ -81,6 +88,7 @@ function executeCommand(action){
                     break;
                 }
             break;
+            // Show the alignment line
             case "l":
             case "line":
                 if(command[1]){
@@ -88,6 +96,12 @@ function executeCommand(action){
                 } else {
                     toggleLineVisibility();
                 }
+                break;
+            // Change the appearance of the output image
+            case "is":
+            case "image-setting":
+            case "image-style":
+                imageStyleCommandHandler(command);
                 break;
             default:
                 infoText.innerHTML = "Command " + command[0] + " not found!";
