@@ -21,20 +21,12 @@ function toggleFreeze(duration = -1){
 
 function saveSnapshot(){
     // Get the canvas content
-    image = canvas.toDataURL("png");
+    image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");;
 
-    // Prepare the data
-    base64Data = image.replace(/^data:image\/png;base64,/, "");
-    base64Data += base64Data.replace('+', ' ');
-    binaryData = new Buffer(base64Data, 'base64').toString('binary');
+    var dlLink = document.createElement("a");
+    dlLink.setAttribute("download", "snapshot.png");
+    dlLink.setAttribute("href", image);
+    dlLink.click();
 
-    var d = new Date();
-    var filename = "snap" + d.getTime() + ".png";
-
-    // Write to disk
-    fs.writeFile(filename, binaryData, "binary", function(err) {
-        console.log(err);
-    });
-
-    infoText.innerHTML = "Snapshot saved";
+    infoText.innerHTML = "Snapshot taken";
 }

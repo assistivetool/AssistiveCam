@@ -15,7 +15,7 @@ function stopRecording(){
     // Check if we're recording and then save the stream
     if(recorder && recorder.state == "recording"){
         recorder.stopRecording(function(blob){
-            recorder.save("test.webm", blob);
+            recorder.save("recording.webm", blob);
             infoText.innerHTML = "Recording stopped";
             // Unset the recorder
             recorder = null;
