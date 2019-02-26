@@ -31,6 +31,24 @@
     bottom: 50%;
 }
 
+#gui {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 10%;
+    height: 100%;
+}
+
+#gui button {
+    text-decoration: none;
+    background: transparent;
+    border: none;
+}
+
+#gui button img {
+    max-width: 75%;
+}
+
 body {
     font-family: sans-serif;
     background-color: black;
