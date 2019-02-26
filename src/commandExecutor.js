@@ -163,3 +163,10 @@ commandBox.addEventListener("keydown", function(event){
         }
     }
 });
+
+// Execute startup commands
+if(config["startupCommands"]){
+    for(i = 0; i <= config["startupCommands"].length; i++){
+        executeCommand(config["startupCommands"][i]);
+    }
+}

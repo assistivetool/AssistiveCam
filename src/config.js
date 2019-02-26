@@ -20,5 +20,6 @@ var config = {
     "keys": {
         "abort": "Escape",
         "send": "Enter"
-    }
+    },
+    "startupCommands": []
 }
