@@ -14,15 +14,21 @@ navigator.mediaDevices.enumerateDevices().then(function(devices){
     startStream(availableDevices[0]);
 });
 
+function useCamera(camera = 0){
+    // Get the new device and restart the stream
+    var newDevice = availableDevices[camera];
+    activeDevice = camera;
+    startStream(newDevice);
+}
+
 function cycleCamera(){
+    var nextDevice = activeDevice;
     // Get the next available camera
-    if(activeDevice >= availableDevices.length){
-        activeDevice = 0;
+    if(nextDevice >= availableDevices.length){
+        nextDevice = 0;
     } else {
-        activeDevice += 1;
+        nextDevice += 1;
     }
 
-    // Get the new device and restart the stream
-    newDevice = availableDevices[activeDevice];
-    startStream(newDevice);
+    useCamera(nextDevice);
 }

@@ -66,7 +66,8 @@ function executeCommand(action){
                         cycleCamera();
                     break;
                     default:
-                        // TODO
+                        // The user can directly specify the camera to jump to
+                        useCamera(command[2]);
                     break;
                 }
             break;
