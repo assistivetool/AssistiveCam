@@ -1,4 +1,5 @@
 const gui = document.getElementById("gui");
+var guiVisible = false;
 
 // Create GUI elements dynamically
 for(i = 0; i < guiConfig.length; i++){
@@ -10,4 +11,14 @@ for(i = 0; i < guiConfig.length; i++){
 
     // Add the button to the GUI element
     gui.appendChild(button);
+}
+
+function toggleGUIVisibility(){
+    if(guiVisible){
+        gui.className = "invisible";
+        guiVisible = false;
+    } else {
+        gui.className = "";
+        guiVisible = true;
+    }
 }

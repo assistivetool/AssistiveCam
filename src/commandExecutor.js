@@ -107,13 +107,18 @@ function executeCommand(action){
                         toggleLineVisibility();
                     break;
                 }
-                break;
+            break;
             // Change the appearance of the output image
             case "is":
             case "image-setting":
             case "image-style":
                 imageStyleCommandHandler(command);
-                break;
+            break;
+            // Hide/show the gui
+            case "g":
+            case "gui":
+                toggleGUIVisibility();
+            break;
             default:
                 infoText.innerHTML = "Command " + command[0] + " not found!";
                 console.error("Unknown command " + command[0]);

@@ -25,6 +25,7 @@ npm start
 * ```p``` to freeze the image
 * ```s``` to instantly save a snapshot of the current canvas (without effects)
 * ```l``` to toggle an alignment help
+* ```g``` to toggle the gui
 
 ## List of commands
 
