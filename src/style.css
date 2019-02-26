@@ -3,6 +3,8 @@
     height: 100%;
     position: relative;
     image-rendering: pixelated;
+    margin: 0;
+    padding: 0;
 }
 
 .invisible {

@@ -119,6 +119,11 @@ function executeCommand(action){
             case "gui":
                 toggleGUIVisibility();
             break;
+            case "rec":
+            case "record":
+            case "recording":
+                toggleVideoRecording();
+            break;
             default:
                 // Check if there's an alias set
                 if(config["aliasCommands"][command[0]]){

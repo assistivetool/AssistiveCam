@@ -1,4 +1,5 @@
 const fs = require('fs');
+const RecordRTC = require('RecordRTC');
 
 // Get all page elements
 const feed = document.getElementById("videofeed");
@@ -9,6 +10,7 @@ const line = document.getElementById('line');
 
 const ctx = canvas.getContext('2d');
 var mediaDeviceId = "";
+var mediaStream = null;
 
 // Project the video content onto the canvas
 // Probably also a very inefficient way to handle this
@@ -45,6 +47,7 @@ function startStream(device){
         .then(function (stream){
             feed.srcObject = stream;
             feed.play();
+            mediaStream = stream;
         })
         // Tell the user about a possible error
         .catch(function (error){

@@ -15,6 +15,7 @@ AssistiveCam is controlled by commands. Simple keyboard shortcuts for all comman
 | line [position/height] [arg]  | l [p/h]       | Show alignment help line      |
 | image-style <setting> <arg>   | is <s> <arg>  | Change an image filter        |
 | gui                           | g             | Hide/show the gui             |
+| recording                     | rec, record   | Toggle video recording        |
 
 ## Examples
 
