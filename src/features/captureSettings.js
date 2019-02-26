@@ -4,6 +4,7 @@ var settingSaturation = 0;
 var settingBrightness = 0;
 var settingHueRotation = 0;
 var settingInvert = 0;
+var settingSepia = 0;
 
 // Load the default styling from the config
 function setStylingDefaults(){
@@ -12,6 +13,7 @@ function setStylingDefaults(){
     settingBrightness = config["styling"]["brightness"] + "%";
     settingHueRotation = config["styling"]["hue-rotate"] + "deg";
     settingInvert = config["styling"]["invert"] + "%";
+    settingSepia = config["styling"]["sepia"] + "%";
 }
 
 // Run once on application start
@@ -26,6 +28,7 @@ function updateStyling(revert = false){
         appliedCSSFilters += " brightness(" + settingBrightness + ")";
         appliedCSSFilters += " hue-rotate(" + settingHueRotation + ")";
         appliedCSSFilters += " invert(" + settingInvert + ")";
+        appliedCSSFilters += " sepia(" + settingSepia + ")";
 
         // Finally, apply the new CSS to the canvas
         console.log(appliedCSSFilters);
@@ -33,7 +36,6 @@ function updateStyling(revert = false){
     } else {
         // Remove the custom settings
         setStylingDefaults();
-        canvas.style.filter = null;
     }
 }
 
@@ -52,6 +54,7 @@ function imageStyleCommandHandler(command){
             updateStyling();
         break;
         case "s":
+        case "sa":
         case "saturate":
         case "saturation":
             settingSaturation = command[2] + "%";
@@ -65,6 +68,11 @@ function imageStyleCommandHandler(command){
         case "i":
         case "invert":
             settingInvert = command[2] + "%";
+            updateStyling();
+        break;
+        case "se":
+        case "sepia":
+            settingSepia = command[2] + "%";
             updateStyling();
         break;
         case "r":

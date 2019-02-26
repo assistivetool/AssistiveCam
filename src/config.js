@@ -4,7 +4,8 @@ var config = {
         "brightness": 100,
         "hue-rotate": 0,
         "saturate": 100,
-        "invert": 0
+        "invert": 0,
+        "sepia": 0
     },
     "defaults": {
         "in": 0.2,
