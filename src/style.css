@@ -26,7 +26,7 @@
 #line {
     position: fixed;
     width: 100%;
-    height: 1em;
+    height: 0.5em;
     background-color: black;
     bottom: 50%;
 }

@@ -91,10 +91,20 @@ function executeCommand(action){
             // Show the alignment line
             case "l":
             case "line":
-                if(command[1]){
-                    changeLinePosition(command[1]);
-                } else {
-                    toggleLineVisibility();
+                switch(command[1]){
+                    case "p":
+                    case "position":
+                        changeLinePosition(command[2]);
+                    break;
+                    case "t":
+                    case "thickness":
+                    case "h":
+                    case "height":
+                        changeLineThickness(command[2]);
+                    break;
+                    default:
+                        toggleLineVisibility();
+                    break;
                 }
                 break;
             // Change the appearance of the output image

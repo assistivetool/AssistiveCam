@@ -11,6 +11,10 @@ function toggleLineVisibility(){
     }
 }
 
+function changeLineThickness(height = "0.5"){
+    line.style.height = height + "em";
+}
+
 function changeLinePosition(position = 50){
-    line.style = "bottom: " + position + "%";
+    line.style.top = position + "%";
 }
