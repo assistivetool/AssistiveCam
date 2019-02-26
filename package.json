@@ -3,11 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
-  "dependencies": {
+  "devDependencies": {
     "electron": "^4.0.5",
     "electron-packager": "^13.1.0"
   },
-  "devDependencies": {},
   "scripts": {
     "start": "electron ."
   },
