@@ -16,6 +16,7 @@ function setStylingDefaults(){
 
 // Run once on application start
 setStylingDefaults();
+updateStyling();
 
 function updateStyling(revert = false){
     if(!revert){
