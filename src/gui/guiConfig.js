@@ -25,6 +25,11 @@ var guiConfig = [
         "command": "snapshot&&freeze 2"
     },
     {
+        "label": "Rotate",
+        "picture": "gui/assets/rotate.png",
+        "command": "rotate"
+    },
+    {
         "label": "Cycle camera",
         "picture": "gui/assets/camera-cycle.png",
         "command": "camera cycle"
