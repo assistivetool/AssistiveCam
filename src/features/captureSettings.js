@@ -36,6 +36,7 @@ function updateStyling(revert = false){
     } else {
         // Remove the custom settings
         setStyling();
+        updateStyling();
     }
 }
 
