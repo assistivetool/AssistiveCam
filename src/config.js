@@ -13,7 +13,7 @@ var config = {
         "max": 6
     },
     "shortcuts": {
-        "s": "snapshot&&freeze 2000",
+        "s": "snapshot&&freeze 2",
         "r": "rotate 90",
         "+": "zoom in",
         "-": "zoom out",

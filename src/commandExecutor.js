@@ -43,7 +43,7 @@ function executeCommand(action){
             case "fr":
             case "freeze":
                 if(command[1]){
-                    toggleFreeze(command[1]);
+                    toggleFreeze(command[1] * 1000);
                 } else {
                     toggleFreeze(-1);
                 }
