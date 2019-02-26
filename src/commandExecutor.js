@@ -120,8 +120,14 @@ function executeCommand(action){
                 toggleGUIVisibility();
             break;
             default:
-                infoText.innerHTML = "Command " + command[0] + " not found!";
-                console.error("Unknown command " + command[0]);
+                // Check if there's an alias set
+                if(config["aliasCommands"][command[0]]){
+                    // Run the function again with the alias
+                    executeCommand(config["aliasCommands"][command[0]]);
+                } else {
+                    infoText.innerHTML = "Command " + command[0] + " not found!";
+                    console.error("Unknown command " + command[0]);
+                }
             break;
         }
     }

@@ -21,5 +21,8 @@ var config = {
         "abort": "Escape",
         "send": "Enter"
     },
-    "startupCommands": []
+    "startupCommands": [],
+    "aliasCommands": {
+        "bw": "filter 1" 
+    }
 }
