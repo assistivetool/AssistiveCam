@@ -7,17 +7,17 @@ var settingInvert = 0;
 var settingSepia = 0;
 
 // Load the default styling from the config
-function setStylingDefaults(){
-    settingContrast = config["styling"]["contrast"] + "%";
-    settingSaturation = config["styling"]["saturate"] + "%";
-    settingBrightness = config["styling"]["brightness"] + "%";
-    settingHueRotation = config["styling"]["hue-rotate"] + "deg";
-    settingInvert = config["styling"]["invert"] + "%";
-    settingSepia = config["styling"]["sepia"] + "%";
+function setStyling(profile = 0){
+    settingContrast = profiles[profile]["contrast"] + "%";
+    settingSaturation = profiles[profile]["saturate"] + "%";
+    settingBrightness = profiles[profile]["brightness"] + "%";
+    settingHueRotation = profiles[profile]["hue-rotate"] + "deg";
+    settingInvert = profiles[profile]["invert"] + "%";
+    settingSepia = profiles[profile]["sepia"] + "%";
 }
 
 // Run once on application start
-setStylingDefaults();
+setStyling();
 updateStyling();
 
 function updateStyling(revert = false){
@@ -35,7 +35,7 @@ function updateStyling(revert = false){
         canvas.style.filter = appliedCSSFilters;
     } else {
         // Remove the custom settings
-        setStylingDefaults();
+        setStyling();
     }
 }
 

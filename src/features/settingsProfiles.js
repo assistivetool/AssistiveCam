@@ -1,32 +1,24 @@
 // All available filters
-const filters = [
-    "default",
-    "grayscale",
-    "sepia",
-    "high-contrast",
-    "inverted",
-    "very-bright",
-    "low-light"
-];
 var selectedFilter = 0;
 
 function applyFilter(filter){
     // Make sure the filter exists
-    if(filter < filters.length && filter >= 0){
-        nextFilter = filters[filter];
-
+    if(profiles[filter]){
         // Apply the filter to the canvas
-        canvas.className = "viewer " + nextFilter;
+        setStyling(filter);
+        updateStyling();
         selectedFilter = filter;
 
         // Show the filter name in infoText
-        infoText.innerHTML = nextFilter;
+        infoText.innerHTML = "Applied profile " + profiles[filter]["name"];
+    } else {
+        infoText.innerHTML = "Unknown profile";
     }
 }
 
 function cycleFilter(){
     // Get the next filter, avoid doing the first one twice
-    if((selectedFilter + 1) >= filters.length){
+    if((selectedFilter + 1) >= profiles.length){
         nextFilter = 0;
     } else {
         nextFilter = selectedFilter + 1;
