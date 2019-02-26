@@ -23,6 +23,8 @@ var config = {
     },
     "startupCommands": [],
     "aliasCommands": {
-        "bw": "filter 1" 
+        "bw": "image-style saturation 0",
+        "invert": "image-style invert 100",
+        "sepia": "image-style sepia 100" 
     }
 }
