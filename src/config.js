@@ -1,4 +1,11 @@
 var config = {
+    "styling": {
+        "contrast": 100,
+        "brightness": 100,
+        "hue-rotate": 0,
+        "saturate": 100,
+        "invert": 0
+    },
     "defaults": {
         "in": 0.2,
         "out": 0.2,

@@ -1,9 +1,21 @@
 // Capture settings
-var settingContrast = "100%";
-var settingSaturation = "100%";
-var settingBrightness = "100%";
-var settingHueRotation = "0deg";
-var settingInvert = "0%";
+var settingContrast = 0;
+var settingSaturation = 0;
+var settingBrightness = 0;
+var settingHueRotation = 0;
+var settingInvert = 0;
+
+// Load the default styling from the config
+function setStylingDefaults(){
+    settingContrast = config["styling"]["contrast"] + "%";
+    settingSaturation = config["styling"]["saturate"] + "%";
+    settingBrightness = config["styling"]["brightness"] + "%";
+    settingHueRotation = config["styling"]["hue-rotate"] + "deg";
+    settingInvert = config["styling"]["invert"] + "%";
+}
+
+// Run once on application start
+setStylingDefaults();
 
 function updateStyling(revert = false){
     if(!revert){
@@ -19,6 +31,7 @@ function updateStyling(revert = false){
         canvas.style.filter = appliedCSSFilters;
     } else {
         // Remove the custom settings
+        setStylingDefaults();
         canvas.style.filter = null;
     }
 }
