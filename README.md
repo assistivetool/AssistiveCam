@@ -28,4 +28,4 @@ npm start
 
 ## List of commands
 
-To see an up-to-date list of example commands, check out [the defaults & config file!](src/config.js)
+To see an up-to-date list of commands, check out [the documentation!](COMMANDS.md)
