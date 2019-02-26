@@ -38,7 +38,7 @@ function startStream(device){
                 height: 720,
                 deviceId: device
             },
-            audio: false
+            audio: true
         };
         console.log(constraints);
         navigator.mediaDevices.getUserMedia(constraints)
