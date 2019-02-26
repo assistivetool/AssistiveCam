@@ -3,6 +3,7 @@ var settingContrast = "100%";
 var settingSaturation = "100%";
 var settingBrightness = "100%";
 var settingHueRotation = "0deg";
+var settingInvert = "0%";
 
 function updateStyling(revert = false){
     if(!revert){
@@ -11,7 +12,8 @@ function updateStyling(revert = false){
         appliedCSSFilters += " saturate(" + settingSaturation + ")";
         appliedCSSFilters += " brightness(" + settingBrightness + ")";
         appliedCSSFilters += " hue-rotate(" + settingHueRotation + ")";
-        
+        appliedCSSFilters += " invert(" + settingInvert + ")";
+
         // Finally, apply the new CSS to the canvas
         console.log(appliedCSSFilters);
         canvas.style.filter = appliedCSSFilters;
@@ -44,6 +46,11 @@ function imageStyleCommandHandler(command){
         case "hr":
         case "hue-rotation":
             settingHueRotation = command[2] + "deg";
+            updateStyling();
+        break;
+        case "i":
+        case "invert":
+            settingInvert = command[2] + "%";
             updateStyling();
         break;
         case "r":
