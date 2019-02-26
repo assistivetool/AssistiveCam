@@ -8,7 +8,10 @@ function createWindow() {
     win = new BrowserWindow({ 
         width: 1280,
         height: 720,
-        icon: path.join(__dirname, "assets/icon.png")
+        icon: path.join(__dirname, "assets/icon.png"),
+        webPreferences: {
+            nodeIntegration: true
+        }
     });
     win.setMenu(null);
     win.loadFile("src/index.html");

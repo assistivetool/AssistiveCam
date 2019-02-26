@@ -27,6 +27,7 @@ function saveSnapshot(){
     dlLink.setAttribute("download", "snapshot.png");
     dlLink.setAttribute("href", image);
     dlLink.click();
+    dlLink.remove();
 
     infoText.innerHTML = "Snapshot taken";
 }

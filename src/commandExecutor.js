@@ -176,7 +176,7 @@ commandBox.addEventListener("keydown", function(event){
 });
 
 // Execute startup commands
-if(config["startupCommands"]){
+if(config["startupCommands"].length != 0){
     for(i = 0; i <= config["startupCommands"].length; i++){
         executeCommand(config["startupCommands"][i]);
     }

@@ -1,4 +1,3 @@
-const fs = require('fs');
 const RecordRTC = require('RecordRTC');
 
 // Get all page elements
