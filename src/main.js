@@ -1,4 +1,4 @@
-const RecordRTC = require('RecordRTC');
+const RecordRTC = require('recordrtc');
 
 // Get all page elements
 const feed = document.getElementById("videofeed");
@@ -34,8 +34,8 @@ function startStream(device){
     if(navigator.mediaDevices.getUserMedia){
         var constraints = {
             video: {
-                width: 1280,
-                height: 720,
+                width: 1920,
+                height: 1080,
                 deviceId: device
             },
             audio: true
