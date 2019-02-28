@@ -18,3 +18,7 @@ function changeLineThickness(height = "0.5"){
 function changeLinePosition(position = 50){
     line.style.top = position + "%";
 }
+
+function changeLineColor(color = "000"){
+    line.style.backgroundColor = "#" + color;
+}

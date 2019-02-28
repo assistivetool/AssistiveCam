@@ -103,6 +103,11 @@ function executeCommand(action){
                     case "height":
                         changeLineThickness(command[2]);
                     break;
+                    case "c":
+                    case "color":
+                    case "colour":
+                        changeLineColor(command[2]);
+                    break;
                     default:
                         toggleLineVisibility();
                     break;
