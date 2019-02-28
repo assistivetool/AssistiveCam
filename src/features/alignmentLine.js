@@ -22,3 +22,7 @@ function changeLinePosition(position = 50){
 function changeLineColor(color = "000"){
     line.style.backgroundColor = "#" + color;
 }
+
+function revertLineChanges(){
+    line.style = null;
+}

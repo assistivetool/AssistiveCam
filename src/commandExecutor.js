@@ -108,6 +108,11 @@ function executeCommand(action){
                     case "colour":
                         changeLineColor(command[2]);
                     break;
+                    case "r":
+                    case "reset":
+                    case "revert":
+                        revertLineChanges();
+                    break;
                     default:
                         toggleLineVisibility();
                     break;
