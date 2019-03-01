@@ -10,10 +10,10 @@ AssistiveCam is controlled by commands. Simple keyboard shortcuts for all comman
 | snapshot                      | snap          | Save a snapshot to disk       |
 | rotate                        |               | Rotate the view by 90 degrees |
 | camera <cycle/cam> [arg]      | c <c/cam>     | Use a different camera        |
-| toggleinfo                    | i             | Hide/show the info text       |
+| toggleinfo                    | ti             | Hide/show the info text       |
 | filter <cycle/no.>            | f <cycle/no.> | Apply a filter profile        |
 | line [position/height] [arg]  | l [p/h]       | Show alignment help line      |
-| image-style <setting> <arg>   | is <s> <arg>  | Change an image filter        |
+| image-style <setting> <arg>   | i <s> <arg>  | Change an image filter        |
 | gui                           | g             | Hide/show the gui             |
 | recording                     | rec, record   | Toggle video recording        |
 

@@ -72,7 +72,7 @@ function executeCommand(action){
                 }
             break;
             // Hide or show the info text
-            case "i":
+            case "ti":
             case "toggleinfo":
                 toggleInfoTextVisibility();
             break;
@@ -119,6 +119,7 @@ function executeCommand(action){
                 }
             break;
             // Change the appearance of the output image
+            case "i":
             case "is":
             case "image-setting":
             case "image-style":
