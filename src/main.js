@@ -1,4 +1,5 @@
 const RecordRTC = require('recordrtc');
+const FileSaver = require('file-saver');
 
 // Get all page elements
 const feed = document.getElementById("videofeed");

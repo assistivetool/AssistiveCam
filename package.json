@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/assistivetool/AssistiveCam#readme",
   "dependencies": {
+    "file-saver": "^2.0.1",
     "recordrtc": "^5.5.4"
   }
 }

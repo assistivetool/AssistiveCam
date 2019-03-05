@@ -23,15 +23,7 @@ function toggleFreeze(duration = -1){
 
 function saveSnapshot(){
     // Get the canvas content
-    image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");;
-
-    event.emit("snapshot", image);
-
-    var dlLink = document.createElement("a");
-    dlLink.setAttribute("download", "snapshot.png");
-    dlLink.setAttribute("href", image);
-    dlLink.click();
-    dlLink.remove();
-
-    changeInfoText("Snapshot taken");
+    canvas.toBlob(function(blob){
+        FileSaver.saveAs(blob, "snapshot.png");
+    }, "image/png");
 }
