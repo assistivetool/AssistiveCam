@@ -2,6 +2,7 @@ var inFreeze = false;
 
 function toggleFreeze(duration = -1){
     if(inFreeze == false){
+        event.emit("freezeOn");
         feed.pause();
         inFreeze = true;
         if(duration > 0){
@@ -14,6 +15,7 @@ function toggleFreeze(duration = -1){
             }, duration);
         }
     } else {
+        event.emit("freezeOff");
         feed.play();
         inFreeze = false;
     }
@@ -22,6 +24,8 @@ function toggleFreeze(duration = -1){
 function saveSnapshot(){
     // Get the canvas content
     image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");;
+
+    event.emit("snapshot", image);
 
     var dlLink = document.createElement("a");
     dlLink.setAttribute("download", "snapshot.png");
