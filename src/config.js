@@ -26,5 +26,6 @@ var config = {
         "bw": "image-style saturation 0",
         "invert": "image-style invert 100",
         "sepia": "image-style sepia 100" 
-    }
+    },
+    "events": {}
 }
