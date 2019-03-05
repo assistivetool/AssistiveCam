@@ -2,6 +2,9 @@ var zoomLevel = 1.00;
 
 function changeZoomLevel(level){
     level = Number(Number(level).toPrecision(2));
+
+    event.emit("zoom", level);
+
     canvas.width = feed.videoWidth / level;
     canvas.height = feed.videoHeight / level;
     zoomLevel = level;
