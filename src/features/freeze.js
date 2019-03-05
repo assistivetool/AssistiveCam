@@ -25,5 +25,7 @@ function saveSnapshot(){
     // Get the canvas content
     canvas.toBlob(function(blob){
         FileSaver.saveAs(blob, "snapshot.png");
+        event.emit("snapshot", blob);
+        changeInfoText("Snapshot taken");
     }, "image/png");
 }
