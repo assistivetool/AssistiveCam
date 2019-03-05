@@ -11,7 +11,7 @@ function registerEventCommandListeners(){
 
             // Attach the commands
             event.on(registerEvent, function(){
-                executeCommand(registerCommands.join("&&"));
+                executeCommand(registerCommands);
             });
         }
     }
