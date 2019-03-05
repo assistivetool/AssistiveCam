@@ -11,7 +11,9 @@ function executeCommand(action){
     for(i = 0; i < commands.length; i++){
         command = commands[i];
         command = command.split(" ");
-                            
+        
+        event.emit("command", command);
+
         // Try to perform the action
         switch(command[0]){
             // Toggle the command box
