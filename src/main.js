@@ -7,6 +7,10 @@ const canvas = document.getElementById('manipulatedVideo');
 const commandBox = document.getElementById('command');
 const line = document.getElementById('line');
 
+// Event emitter
+var EventEmitter = require('events').EventEmitter;
+var event = new EventEmitter;
+
 const ctx = canvas.getContext('2d');
 var mediaDeviceId = "";
 var mediaStream = null;
@@ -29,6 +33,17 @@ feed.addEventListener('loadedmetadata', function() {
     canvas.height = feed.videoHeight;
 });
 
+// Handle the info display
+function changeInfoText(text){
+    infoText.innerHTML = text;
+    event.emit("changeInfoText", text);
+}
+
+event.on("changeInfoText", function(text){
+    console.log(text);
+});
+
+// Start up the stream
 function startStream(device){
     // Make sure UserMedia is supported
     if(navigator.mediaDevices.getUserMedia){
@@ -51,7 +66,7 @@ function startStream(device){
         // Tell the user about a possible error
         .catch(function (error){
             console.error(error);
-            infoText.innerHTML = "Last error - " + error;
+            changeInfoText("Last error - " + error);
         });
     } else {
         console.error("navigator.mediaDevices.getUserMedia doesn't seem to be supported by this browser.");

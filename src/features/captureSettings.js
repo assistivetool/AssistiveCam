@@ -82,7 +82,7 @@ function imageStyleCommandHandler(command){
             updateStyling(true);
         break;
         default:
-            infoText.innerHTML = "Unknown setting " + command[1];
+            changeInfoText("Unknown setting " + command[1]);
         break;
     }
 }

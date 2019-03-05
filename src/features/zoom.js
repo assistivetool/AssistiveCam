@@ -4,7 +4,7 @@ function changeZoomLevel(level){
     canvas.width = feed.videoWidth / level;
     canvas.height = feed.videoHeight / level;
     zoomLevel = level;
-    infoText.innerHTML = "Zoom level: " + zoomLevel;
+    changeInfoText("Zoom level: " + zoomLevel);
 }
 
 

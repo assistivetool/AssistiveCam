@@ -5,9 +5,9 @@ function startRecording(){
         // Start a new recording
         recorder = RecordRTC(mediaStream);
         recorder.startRecording();
-        infoText.innerHTML = "Recording started";
+        changeInfoText("Recording started");
     } else {
-        infoText.innerHTML = "Already recording";
+        changeInfoText("Already recording");
     }
 }
 
@@ -16,7 +16,7 @@ function stopRecording(){
     if(recorder && recorder.state == "recording"){
         recorder.stopRecording(function(blob){
             recorder.save("recording.webm", blob);
-            infoText.innerHTML = "Recording stopped";
+            changeInfoText("Recording stopped");
             // Unset the recorder
             recorder = null;
         });

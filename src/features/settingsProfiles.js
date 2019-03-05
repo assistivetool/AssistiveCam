@@ -10,9 +10,9 @@ function applyFilter(filter){
         selectedFilter = filter;
 
         // Show the filter name in infoText
-        infoText.innerHTML = "Applied profile " + profiles[filter]["name"];
+        changeInfoText("Profile " + profiles[filter]["name"]);
     } else {
-        infoText.innerHTML = "Unknown profile";
+        changeInfoText("Unknown profile");
     }
 }
 

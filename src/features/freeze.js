@@ -29,5 +29,5 @@ function saveSnapshot(){
     dlLink.click();
     dlLink.remove();
 
-    infoText.innerHTML = "Snapshot taken";
+    changeInfoText("Snapshot taken");
 }

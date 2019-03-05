@@ -141,8 +141,7 @@ function executeCommand(action){
                     // Run the function again with the alias
                     executeCommand(config["aliasCommands"][command[0]]);
                 } else {
-                    infoText.innerHTML = "Command " + command[0] + " not found!";
-                    console.error("Unknown command " + command[0]);
+                    changeInfoText("Command " + command[0] + " not found!");
                 }
             break;
         }
