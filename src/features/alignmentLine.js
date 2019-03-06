@@ -1,4 +1,5 @@
 var lineVisible = false;
+var linePosition = 50;
 
 function toggleLineVisibility(){
     // Toggle the visibility of the line
@@ -17,6 +18,7 @@ function changeLineThickness(height = "0.5"){
 
 function changeLinePosition(position = 50){
     line.style.top = position + "%";
+    linePosition = position;
 }
 
 function changeLineColor(color = "000"){

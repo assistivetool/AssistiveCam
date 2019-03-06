@@ -15,7 +15,9 @@ var config = {
         "f": "filter cycle",
         ":": "command",
         "l": "line",
-        "g": "gui"
+        "g": "gui",
+        "ArrowDown": "line next",
+        "ArrowUp": "line previous"
     },
     "keys": {
         "abort": "Escape",

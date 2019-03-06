@@ -110,6 +110,23 @@ function executeCommand(action){
                     case "colour":
                         changeLineColor(command[2]);
                     break;
+                    case "p":
+                    case "previous":
+                        // Keep it on screen!
+                        var newPosition = linePosition - 10;
+                        if(newPosition <= 0){
+                            newPosition = 90;
+                        }
+                        changeLinePosition(newPosition);
+                    break;
+                    case "n":
+                    case "next":
+                        var newPosition = linePosition + 10;
+                        if(newPosition >= 100){
+                            newPosition = 0;
+                        }
+                        changeLinePosition(newPosition);
+                    break;
                     case "r":
                     case "reset":
                     case "revert":
