@@ -19,9 +19,13 @@ function createWindow() {
         // Dereference the window object
         win = null
     });
+    // Enable accessibility on linux automatically because Electron does not know when assistive technology is running
+    if(process.platform == "linux") {
+        app.setAccessibilitySupportEnabled(true);
+    }
 }
 
-app.on("ready", createWindow)
+app.on("ready", createWindow);
 
 // Quit when all windows are closed.
 app.on("window-all-closed", () => {
