@@ -1,5 +1,11 @@
 const RecordRTC = require('recordrtc');
 const FileSaver = require('file-saver');
+const ShellJS = require("shelljs");
+
+// Set up ShellJS for use with electron
+if(config["tts"] === true){
+    ShellJS.config.execPath = config["node-binary"];
+}
 
 // Get all page elements
 const feed = document.getElementById("videofeed");
@@ -37,6 +43,10 @@ feed.addEventListener('loadedmetadata', function() {
 // Handle the info display
 function changeInfoText(text){
     infoText.innerHTML = text;
+    // Run the tts if enabled
+    if(config["tts"] === true){
+        ShellJS.exec(config["tts-command"] + ' "' + text + '"', true, true, true);
+    }
     event.emit("changeInfoText", text);
 }
 

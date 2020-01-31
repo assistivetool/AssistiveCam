@@ -11,7 +11,7 @@
     "start": "electron .",
     "dist-mac": "electron-packager . AssistiveCam --overwrite --prune=true --platform=darwin --arch=x64 --icon=assets/macIcon.icns",
     "dist-linux": "electron-packager . AssistiveCam --overwrite --prune=true --platform=linux --arch=x64 --icon=assets/icon.png",
-    "dist-windows": "electron-packager . AssistiveCam --overwrite --prune=true --platform=win32 --icon=assets/icon.png"
+    "dist-windows": "electron-packager . AssistiveCam --overwrite --prune=true --platform=win32" 
   },
   "repository": {
     "type": "git",
