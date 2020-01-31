@@ -31,7 +31,7 @@ var config = {
     },
     "tts": true,
     "ttsByDefault": false,
-    "tts-command": "spd-say",
+    "tts-command": "spd-say -r 90",
     "node-binary": "/usr/bin/nodejs",
     "events": {}
 }
