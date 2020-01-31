@@ -6,6 +6,7 @@ function toggleFreeze(duration = -1){
         feed.pause();
         inFreeze = true;
         if(duration > 0){
+            changeInfoText("Freeze view for " + (duration / 1000) + " seconds");
             // Unfreeze in the given amount of milliseconds
             window.setTimeout(function(){
                 // Only unfreeze when we're in freeze
@@ -13,10 +14,13 @@ function toggleFreeze(duration = -1){
                     toggleFreeze();
                 }
             }, duration);
+        } else {
+            changeInfoText("Freeze view");
         }
     } else {
         event.emit("freezeOff");
         feed.play();
+        changeInfoText("Unfreeze");
         inFreeze = false;
     }
 }

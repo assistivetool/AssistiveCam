@@ -7,6 +7,7 @@ function rotate90deg(){
         newRotation = 0;
     }
 
+    changeInfoText("Rotated by " + newRotation + " degrees");
     canvas.style.transform = "rotate(" + newRotation + "deg)";
     imageRotation = newRotation;
 }
