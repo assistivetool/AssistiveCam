@@ -156,7 +156,16 @@ function executeCommand(action){
             break;
             case "tts":
             case "speech":
-                toggleTTSOutput();
+                switch(command[1]){
+                    case "r":
+                    case "repeat":
+                        // Repeat what was said
+                        ttsOutput(infoText.innerHTML);
+                    break;
+                    default:
+                        toggleTTSOutput();
+                    break;
+                }
             break;
             default:
                 // Check if there's an alias set
