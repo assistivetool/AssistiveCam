@@ -26,6 +26,7 @@ npm start
 * ```s``` to instantly save a snapshot of the current canvas (without effects)
 * ```l``` to toggle an alignment help
 * ```g``` to toggle the gui
+* ```t``` to toggle text-to-speech output
 
 ## List of commands
 

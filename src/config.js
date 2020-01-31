@@ -16,8 +16,9 @@ var config = {
         ":": "command",
         "l": "line",
         "g": "gui",
+        "t": "tts",
         "ArrowDown": "line next",
-        "ArrowUp": "line previous"
+        "ArrowUp": "line previous",
     },
     "keys": {
         "abort": "Escape",

@@ -9,7 +9,7 @@ if(config["tts"] === true){
 function ttsOutput(text){
 	// Only output if feature enabled
 	if(ttsEnabled && config["tts"] === true){
-		ShellJS.exec(config["tts-command"] + ' "' + text + '"', true, true, true);
+		ShellJS.exec(config["tts-command"] + ' "' + text + '"', {async:true, silent:true, fatal:true});
 	}
 }
 
