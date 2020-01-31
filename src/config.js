@@ -30,6 +30,7 @@ var config = {
         "sepia": "image-style sepia 100" 
     },
     "tts": true,
+    "ttsByDefault": false,
     "tts-command": "spd-say",
     "node-binary": "/usr/bin/nodejs",
     "events": {}

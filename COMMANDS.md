@@ -16,6 +16,8 @@ AssistiveCam is controlled by commands. Simple keyboard shortcuts for all comman
 | image-style <setting> <arg>   | i <s> <arg>  | Change an image filter        |
 | gui                           | g             | Hide/show the gui             |
 | recording                     | rec, record   | Toggle video recording        |
+| tts							| speech		| Speak info text 			    |
+
 
 ## Examples
 

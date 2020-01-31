@@ -154,6 +154,10 @@ function executeCommand(action){
             case "recording":
                 toggleVideoRecording();
             break;
+            case "tts":
+            case "speech":
+                toggleTTSOutput();
+            break;
             default:
                 // Check if there's an alias set
                 if(config["aliasCommands"][command[0]]){
