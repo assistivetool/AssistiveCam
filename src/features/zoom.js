@@ -5,8 +5,11 @@ function changeZoomLevel(level){
 
     event.emit("zoom", level);
 
-    canvas.width = feed.videoWidth / level;
-    canvas.height = feed.videoHeight / level;
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.translate(canvas.width * 0.5, canvas.height * 0.5);
+    ctx.scale(level, level);
+    ctx.translate(-canvas.width * 0.5, -canvas.height * 0.5);
     zoomLevel = level;
     changeInfoText("Zoom level: " + zoomLevel);
 }
