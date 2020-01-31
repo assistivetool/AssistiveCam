@@ -11,20 +11,25 @@ navigator.mediaDevices.enumerateDevices().then(function(devices){
         }
     }
 
-    startStream(availableDevices[0]);
+    // Start up with the last device from the list
+    // This is especially useful for laptop users who
+    // have multiple cameras and don't want to see
+    // themselves or a black screen when the software starts
+    useCamera(availableDevices.length - 1);
 });
 
 function useCamera(camera = 0){
     // Get the new device and restart the stream
     var newDevice = availableDevices[camera];
     activeDevice = camera;
+    changeInfoText("Camera " + (camera + 1) + " of " + availableDevices.length);
     startStream(newDevice);
 }
 
 function cycleCamera(){
     var nextDevice = activeDevice;
     // Get the next available camera
-    if(nextDevice >= availableDevices.length){
+    if(nextDevice >= availableDevices.length - 1){
         nextDevice = 0;
     } else {
         nextDevice += 1;
