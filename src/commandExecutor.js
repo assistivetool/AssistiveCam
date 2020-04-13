@@ -167,6 +167,10 @@ function executeCommand(action){
                     break;
                 }
             break;
+            case 'config':
+            case "cc":
+                configChangeCommand(command);
+            break;
             default:
                 // Check if there's an alias set
                 if(config["aliasCommands"][command[0]]){
