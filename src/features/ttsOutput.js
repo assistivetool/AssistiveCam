@@ -1,5 +1,6 @@
 // Text to speech output for the infotext display
-ttsEnabled = config["ttsByDefault"];
+// Disabled by default - can be overrideen by putting "tts" in startupCommands
+ttsEnabled = false;
 
 // Set up ShellJS for use with electron
 if(config["tts"] === true){
