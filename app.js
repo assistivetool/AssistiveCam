@@ -21,7 +21,7 @@ function createWindow() {
     });
     // Enable accessibility on linux automatically because Electron does not know when assistive technology is running
     if(process.platform == "linux") {
-        app.setAccessibilitySupportEnabled(true);
+        app.accessibilitySupportEnabled = true;
     }
 }
 
