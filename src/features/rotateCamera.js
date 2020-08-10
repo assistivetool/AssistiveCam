@@ -11,3 +11,12 @@ function rotate90deg(){
     canvas.style.transform = "rotate(" + newRotation + "deg)";
     imageRotation = newRotation;
 }
+
+function mirrorView(){
+	if(canvas.className == "viewer default mirrored"){
+		canvas.className = "viewer default";
+	} else {
+		canvas.className = "viewer default mirrored";
+	}
+	changeInfoText("View flipped");
+}

@@ -167,6 +167,11 @@ function executeCommand(action){
                     break;
                 }
             break;
+            case 'm':
+            case 'mirror':
+            case 'flip':
+                mirrorView();
+            break;
             case 'config':
             case "cc":
                 configChangeCommand(command);

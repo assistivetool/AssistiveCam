@@ -11,6 +11,10 @@
     display: none;
 }
 
+.mirrored {
+    transform: scale(-1, 1);
+}
+
 #info {
     font-size: 2em;
     color: white;

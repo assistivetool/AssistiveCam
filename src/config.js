@@ -17,6 +17,7 @@ var config = {
         "l": "line",
         "g": "gui",
         "t": "tts",
+        "m": "mirror",
         "ArrowDown": "line next",
         "ArrowUp": "line previous",
     },

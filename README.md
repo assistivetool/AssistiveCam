@@ -32,6 +32,7 @@ npm start
 * ```-``` to zoom out
 * ```p``` to freeze the image
 * ```s``` to instantly save a snapshot of the current canvas (without effects)
+* ```m``` to flip the view horizontally
 * ```l``` to toggle an alignment help
 * ```g``` to toggle the gui
 * ```t``` to toggle text-to-speech output
