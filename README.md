@@ -21,6 +21,12 @@ npm install
 npm start
 ```
 
+As of August 2020, AssistiveCam is distributed through Snapcraft! Install it on Ubuntu using
+
+```
+snap install assistivecam
+```
+
 ## Default shortcuts
 
 * ```:``` to bring up a command prompt, like in the vim editor
