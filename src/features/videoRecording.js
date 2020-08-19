@@ -5,6 +5,9 @@ function startRecording(){
         // Start a new recording
         recorder = RecordRTC(mediaStream);
         recorder.startRecording();
+
+        event.emit("recording", true);
+
         changeInfoText("Recording started");
     } else {
         changeInfoText("Already recording");
@@ -19,6 +22,8 @@ function stopRecording(){
             changeInfoText("Recording stopped");
             // Unset the recorder
             recorder = null;
+            
+            event.emit("recording", false);
         });
     }
 }

@@ -33,6 +33,8 @@ function updateStyling(revert = false){
         // Finally, apply the new CSS to the canvas
         console.log(appliedCSSFilters);
         canvas.style.filter = appliedCSSFilters;
+
+        event.emit("style", appliedCSSFilters);
     } else {
         // Remove the custom settings
         setStyling();

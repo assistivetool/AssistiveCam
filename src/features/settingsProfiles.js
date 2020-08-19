@@ -9,6 +9,8 @@ function applyFilter(filter){
         updateStyling();
         selectedFilter = filter;
 
+        event.emit("filter", selectedFilter);
+
         // Show the filter name in infoText
         changeInfoText("Profile: " + profiles[filter]["name"]);
     } else {

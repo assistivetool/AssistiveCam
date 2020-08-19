@@ -24,6 +24,8 @@ function useCamera(camera = 0){
     activeDevice = camera;
     changeInfoText("Camera " + (camera + 1) + " of " + availableDevices.length);
     startStream(newDevice);
+
+    event.emit("camera", camera, availableDevices.length);
 }
 
 function cycleCamera(){

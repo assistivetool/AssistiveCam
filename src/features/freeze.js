@@ -2,7 +2,7 @@ var inFreeze = false;
 
 function toggleFreeze(duration = -1){
     if(inFreeze == false){
-        event.emit("freezeOn");
+        event.emit("freeze", true);
         feed.pause();
         inFreeze = true;
         if(duration > 0){
@@ -18,7 +18,7 @@ function toggleFreeze(duration = -1){
             changeInfoText("Freeze view");
         }
     } else {
-        event.emit("freezeOff");
+        event.emit("freeze", false);
         feed.play();
         changeInfoText("Unfreeze");
         inFreeze = false;

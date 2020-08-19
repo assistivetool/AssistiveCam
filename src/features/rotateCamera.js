@@ -10,13 +10,17 @@ function rotate90deg(){
     changeInfoText("Rotated by " + newRotation + " degrees");
     canvas.style.transform = "rotate(" + newRotation + "deg)";
     imageRotation = newRotation;
+
+    event.emit("rotate", imageRotation);
 }
 
 function mirrorView(){
 	if(canvas.className == "viewer default mirrored"){
-		canvas.className = "viewer default";
+        canvas.className = "viewer default";
+        event.emit("flip", true);
 	} else {
-		canvas.className = "viewer default mirrored";
+        canvas.className = "viewer default mirrored";
+        event.emit("flip", false);
 	}
-	changeInfoText("View flipped");
+    changeInfoText("View flipped");
 }
