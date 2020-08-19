@@ -27,6 +27,8 @@ As of August 2020, AssistiveCam is distributed through Snapcraft! Install it on 
 snap install assistivecam
 ```
 
+At the moment, it is neccessary that you grant permissions to use the camera manually when using the snap.
+
 ## Default shortcuts
 
 * ```:``` to bring up a command prompt, like in the vim editor

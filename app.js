@@ -13,7 +13,7 @@ function createWindow() {
             nodeIntegration: true
         }
     });
-    //win.setMenu(null);
+    win.setMenu(null);
     win.loadFile("src/index.html");
     win.on("closed", () => {
         // Dereference the window object
