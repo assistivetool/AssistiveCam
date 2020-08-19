@@ -45,6 +45,8 @@ At the moment, it is neccessary that you grant permissions to use the camera man
 * ```g``` to toggle the gui
 * ```t``` to toggle text-to-speech output
 
+You may use the arrow keys to change the zoom region or the position of the alignment help when it's activated.
+
 ## List of commands
 
 To see an up-to-date list of commands, check out [the command documentation!](COMMANDS.md)

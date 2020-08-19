@@ -55,6 +55,27 @@ function moveHorizontal(left = true){
         // Perform the action
         horizontalOffset = newValue;
         changeZoomLevel(zoomLevel);
-        changeInfoText("Horizontal offset is " + horizontalOffset);
+    }
+}
+
+function moveVertical(key = false, up = true){
+    // Ignore if the line is visible, move that instead
+    if(key && lineVisible){
+        return;
+    }
+    
+    if(up){
+        var newValue = verticalOffset - 0.1;
+    } else {
+        var newValue = verticalOffset + 0.1;
+    }
+
+    newValue = Number(Number(newValue).toPrecision(1));
+
+    // Make sure it stays in the natural bounds
+    if(newValue >= 0.0 && newValue <= 1.0){
+        // Perform the action
+        verticalOffset = newValue;
+        changeZoomLevel(zoomLevel);
     }
 }

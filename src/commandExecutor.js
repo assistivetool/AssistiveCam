@@ -45,10 +45,28 @@ function executeCommand(action){
                     case 'left':
                         moveHorizontal();
                     break;
+                    case 'u':
+                    case 'up':
+                        if(command[2] == "key"){
+                            moveVertical(true);
+                        } else {
+                            moveVertical(false);
+                        }
+                    break;
+                    case 'd':
+                    case 'down':
+                        if(command[2] == "key"){
+                            moveVertical(true, false);
+                        } else {
+                            moveVertical(false, false);
+                        }
+                    break;
                     case 'c':
                     case 'center':
+                        // Revert zooming
                         horizontalOffset = 0.5;
                         verticalOffset = 0.5;
+                        changeZoomLevel(zoomLevel);
                     break;
                     default:
                         var newLevel = command[1];
