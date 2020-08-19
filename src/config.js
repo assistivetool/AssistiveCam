@@ -20,6 +20,8 @@ var config = {
         "m": "mirror",
         "ArrowDown": "line next",
         "ArrowUp": "line previous",
+        "ArrowLeft": "zoom left",
+        "ArrowRight": "zoom right",
     },
     "keys": {
         "abort": "Escape",

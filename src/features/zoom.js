@@ -1,5 +1,10 @@
 var zoomLevel = 1.00;
 
+// Zoom into the center by default
+var horizontalOffset = 0.5;
+var verticalOffset = 0.5;
+
+// Centerzoom by default
 function changeZoomLevel(level){
     level = Number(Number(level).toPrecision(2));
 
@@ -7,9 +12,9 @@ function changeZoomLevel(level){
 
     ctx.setTransform(1, 0, 0, 1, 0, 0);
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.translate(canvas.width * 0.5, canvas.height * 0.5);
+    ctx.translate(canvas.width * horizontalOffset, canvas.height * verticalOffset);
     ctx.scale(level, level);
-    ctx.translate(-canvas.width * 0.5, -canvas.height * 0.5);
+    ctx.translate(-canvas.width * horizontalOffset, -canvas.height * verticalOffset);
     zoomLevel = level;
     changeInfoText("Zoom level: " + zoomLevel);
 }
@@ -31,5 +36,25 @@ function zoomOut(){
     // Decrase the zoom only until a specified minimum level
     if(newZoomLevel >= 1){
         changeZoomLevel(newZoomLevel);
+    }
+}
+
+// Change the offset while zoomed, enlarge different parts
+function moveHorizontal(left = true){
+    // Determine the destination to move into
+    if(left){
+        var newValue = horizontalOffset - 0.1;
+    } else {
+        var newValue = horizontalOffset + 0.1;
+    }
+    
+    newValue = Number(Number(newValue).toPrecision(1));
+
+    // Make sure it stays in the natural bounds
+    if(newValue >= 0.0 && newValue <= 1.0){
+        // Perform the action
+        horizontalOffset = newValue;
+        changeZoomLevel(zoomLevel);
+        changeInfoText("Horizontal offset is " + horizontalOffset);
     }
 }

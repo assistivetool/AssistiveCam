@@ -37,6 +37,19 @@ function executeCommand(action){
                     case "out":
                         zoomOut();
                     break;
+                    case 'r':
+                    case 'right':
+                        moveHorizontal(false);
+                    break;
+                    case 'l':
+                    case 'left':
+                        moveHorizontal();
+                    break;
+                    case 'c':
+                    case 'center':
+                        horizontalOffset = 0.5;
+                        verticalOffset = 0.5;
+                    break;
                     default:
                         var newLevel = command[1];
                         changeZoomLevel(newLevel);
