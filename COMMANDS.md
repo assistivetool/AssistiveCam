@@ -17,8 +17,9 @@ AssistiveCam is controlled by commands. Simple keyboard shortcuts for all comman
 | gui                           | g             | Hide/show the gui             |
 | recording                     | rec, record   | Toggle video recording        |
 | tts [repeat]					| speech		| Speak info text 			    |
-| config value \<key> \<value> |cc            | Change config on the fly      |
-| mirror	| m, flip	| Mirror the view horizontally	|
+| config value \<key> \<value>  | cc            | Change config on the fly      |
+| mirror	                    | m, flip	    | Mirror the view horizontally	|
+| exit                          | quit, q       | Exit the application          |
 
 
 ## Examples

@@ -1,3 +1,5 @@
+const { remote } = require("electron");
+
 var commandBoxActive = false;
 
 function executeCommand(action){
@@ -175,6 +177,11 @@ function executeCommand(action){
             case 'config':
             case "cc":
                 configChangeCommand(command);
+            break;
+            case 'exit':
+            case 'quit':
+            case 'q':
+                window.close();
             break;
             default:
                 // Check if there's an alias set
