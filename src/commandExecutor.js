@@ -95,10 +95,10 @@ function executeCommand(action){
             // Rotate the image
             case "rotate":
                 // Respect customization
-                if(command[1]){
-                    rotateView(command[1]);
+                if(!isNaN(command[1])){
+                    rotateView(Number(command[1]));
                 } else {
-                    rotateView();
+                    rotateView(90);
                 }
             break;
             // Cycle through the available cameras
