@@ -43,12 +43,12 @@ function zoomOut(){
 function moveHorizontal(left = true){
     // Determine the destination to move into
     if(left){
-        var newValue = horizontalOffset - 0.1;
+        var newValue = horizontalOffset - config["defaults"]["horizontal"];
     } else {
-        var newValue = horizontalOffset + 0.1;
+        var newValue = horizontalOffset + config["defaults"]["horizontal"];
     }
     
-    newValue = Number(Number(newValue).toPrecision(1));
+    newValue = Number(Number(newValue).toPrecision(2));
 
     // Make sure it stays in the natural bounds
     if(newValue >= 0.0 && newValue <= 1.0){
@@ -65,12 +65,12 @@ function moveVertical(key = false, up = true){
     }
     
     if(up){
-        var newValue = verticalOffset - 0.1;
+        var newValue = verticalOffset - config["defaults"]["vertical"];
     } else {
-        var newValue = verticalOffset + 0.1;
+        var newValue = verticalOffset + config["defaults"]["vertical"];
     }
 
-    newValue = Number(Number(newValue).toPrecision(1));
+    newValue = Number(Number(newValue).toPrecision(2));
 
     // Make sure it stays in the natural bounds
     if(newValue >= 0.0 && newValue <= 1.0){
