@@ -94,7 +94,7 @@ function executeCommand(action){
             break;
             // Rotate the image by 90 degrees
             case "rotate":
-                rotate90deg();
+                rotateView();
             break;
             // Cycle through the available cameras
             case "c":
