@@ -10,3 +10,8 @@ function toggleInfoTextVisibility(){
         infoVisible = true;
     }
 }
+
+// Allow users to change the background color of the info tooltip for better readability
+function changeInfoTextBackgroundColor(color = "transparent"){
+    infoText.style.backgroundColor = color;
+}

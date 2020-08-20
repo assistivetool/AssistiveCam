@@ -110,10 +110,14 @@ function executeCommand(action){
                     break;
                 }
             break;
-            // Hide or show the info text
+            // Hide or show the info text, or change the color
             case "ti":
             case "toggleinfo":
-                toggleInfoTextVisibility();
+                if(!command[1]){
+                    toggleInfoTextVisibility();
+                } else {
+                    changeInfoTextBackgroundColor(command[1]);
+                }
             break;
             // Apply a filter or cycle through the list
             case "f":
