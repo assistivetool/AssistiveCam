@@ -19,6 +19,7 @@ AssistiveCam is controlled by commands. Simple keyboard shortcuts for all comman
 | tts [repeat]					| speech		| Speak info text 			    |
 | config value \<key> \<value>  | cc            | Change config on the fly      |
 | mirror	                    | m, flip	    | Mirror the view horizontally	|
+| webhook -url-                 |               | Call a url                    |
 | exit                          | quit, q       | Exit the application          |
 
 

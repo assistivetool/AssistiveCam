@@ -227,6 +227,16 @@ function executeCommand(action){
             case 'q':
                 window.close();
             break;
+            case 'webhook':
+                // Fire a request to a given url
+                if(command[1]){
+                    var request = new XMLHttpRequest();
+                    request.open("GET", command[1], false);
+                    request.send(null);
+                } else {
+                    changeInfoText("No URL supplied for webhook");
+                }
+            break;
             default:
                 // Check if there's an alias set
                 if(config["aliasCommands"][command[0]]){
