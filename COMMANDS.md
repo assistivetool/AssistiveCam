@@ -8,7 +8,7 @@ AssistiveCam is controlled by commands. Simple keyboard shortcuts for all comman
 | zoom <level/in/out>           | z <level/i/o> | Zoom into the image           |
 | freeze [seconds]              | fr            | Freeze the image              |
 | snapshot                      | snap          | Save a snapshot to disk       |
-| rotate                        |               | Rotate the view by 90 degrees |
+| rotate                        | r             | Rotate the view by 90 degrees |
 | camera <cycle/cam> [arg]      | c <c/cam>     | Use a different camera        |
 | toggleinfo                    | ti            | Hide/show the info text       |
 | filter <cycle/no.>            | f <cycle/no.> | Apply a filter profile        |

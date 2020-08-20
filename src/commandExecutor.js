@@ -93,6 +93,7 @@ function executeCommand(action){
                 saveSnapshot();
             break;
             // Rotate the image
+            case 'r':
             case "rotate":
                 // Respect customization
                 if(!isNaN(command[1])){
