@@ -92,9 +92,14 @@ function executeCommand(action){
             case "snapshot":
                 saveSnapshot();
             break;
-            // Rotate the image by 90 degrees
+            // Rotate the image
             case "rotate":
-                rotateView();
+                // Respect customization
+                if(command[1]){
+                    rotateView(command[1]);
+                } else {
+                    rotateView();
+                }
             break;
             // Cycle through the available cameras
             case "c":
