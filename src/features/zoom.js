@@ -5,7 +5,7 @@ var horizontalOffset = 0.5;
 var verticalOffset = 0.5;
 
 // Centerzoom by default
-function changeZoomLevel(level){
+function changeZoomLevel(level = zoomLevel){
     level = Number(Number(level).toPrecision(2));
 
     event.emit("zoom", level);
@@ -78,4 +78,12 @@ function moveVertical(key = false, up = true){
         verticalOffset = newValue;
         changeZoomLevel(zoomLevel);
     }
+}
+
+// Easily reset zoom properties
+function resetZoom(){
+    zoomLevel = 1.0;
+    horizontalOffset = 0.5;
+    verticalOffset = 0.5;
+    changeZoomLevel();
 }

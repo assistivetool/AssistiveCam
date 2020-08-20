@@ -24,6 +24,7 @@ function useCamera(camera = 0){
     activeDevice = camera;
     changeInfoText("Camera " + (camera + 1) + " of " + availableDevices.length);
     startStream(newDevice);
+    resetZoom(); // Reset the zoom
 
     event.emit("camera", camera, availableDevices.length);
 }
