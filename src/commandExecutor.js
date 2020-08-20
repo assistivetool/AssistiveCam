@@ -70,7 +70,11 @@ function executeCommand(action){
                     break;
                     default:
                         var newLevel = command[1];
-                        changeZoomLevel(newLevel);
+                        if(!newLevel){
+                            resetZoom();
+                        } else {
+                            changeZoomLevel(newLevel);
+                        }
                     break;
                 }
             break;
