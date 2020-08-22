@@ -1,6 +1,6 @@
 {
   "name": "assistivecam",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Camera viewer for visually impaired people",
   "main": "app.js",
   "devDependencies": {
