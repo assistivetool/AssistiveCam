@@ -20,6 +20,7 @@ AssistiveCam is controlled by commands. Simple keyboard shortcuts for all comman
 | config value \<key> \<value>  | cc            | Change config on the fly      |
 | mirror	                    | m, flip	    | Mirror the view horizontally	|
 | webhook -url-                 |               | Call a url                    |
+| delay -millicseconds- -cmd-   |               | Delay command execution       |
 | exit                          | quit, q       | Exit the application          |
 
 

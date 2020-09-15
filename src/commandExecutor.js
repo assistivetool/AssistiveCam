@@ -238,6 +238,21 @@ function executeCommand(action){
                     changeInfoText("No URL supplied for webhook");
                 }
             break;
+            case 'delay':
+                // Delay a given command by some time
+                if(command[1] && !isNaN(command[1])){
+                    var delay = command[1];
+                    if(command[2]){
+                        var copyCommand = command.slice(2).join(" "); //Everything onwards
+                        changeInfoText("Scheduling " + copyCommand + " in " + delay + " milliseconds");
+                        setTimeout(executeCommand, delay, copyCommand);
+                    } else {
+                        changeInfoText("No command supplied");
+                    }
+                } else {
+                    changeInfoText("Delay not specified");
+                }
+            break;
             default:
                 // Check if there's an alias set
                 if(config["aliasCommands"][command[0]]){
