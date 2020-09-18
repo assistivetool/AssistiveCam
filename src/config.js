@@ -11,6 +11,7 @@ var config = {
         "r": "rotate 90",
         "+": "zoom in",
         "-": "zoom out",
+        "#": "zoom 1",
         "i": "toggleinfo",
         "c": "camera cycle",
         "p": "freeze",
