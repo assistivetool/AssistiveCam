@@ -3,8 +3,8 @@ var config = {
         "in": 0.1,
         "out": 0.1,
         "max": 12,
-        "horizontal": 0.05,
-        "vertical": 0.05
+        "horizontal": 0.02,
+        "vertical": 0.02
     },
     "shortcuts": {
         "s": "snapshot&&freeze 2",
