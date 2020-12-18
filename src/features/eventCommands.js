@@ -18,7 +18,8 @@ function registerEventCommandListeners(){
 }
 
 // Mouse events should trigger command events
-document.addEventListener("click", function(e){
+// Only react on the viewer so that things are not triggered when the GUI is used
+document.getElementById("manipulatedVideo").addEventListener("click", function(e){
     event.emit("click");
 });
 

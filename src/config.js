@@ -41,6 +41,6 @@ var config = {
     "mousewheel-zoom": true,
     "node-binary": "/usr/bin/nodejs",
     "events": {
-        "click": "filter cycle"
+        "click": "gui"
     }
 }
