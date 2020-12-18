@@ -47,6 +47,10 @@
     border: none;
 }
 
+#gui button:focus {
+    filter: saturate(50);
+}
+
 #gui button img {
     max-width: 60%;
 }
