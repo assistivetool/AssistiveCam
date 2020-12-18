@@ -30,7 +30,6 @@ var config = {
         "abort": "Escape",
         "send": "Enter"
     },
-    "startupCommands": [],
     "aliasCommands": {
         "bw": "image-style saturation 0",
         "invert": "image-style invert 100",
