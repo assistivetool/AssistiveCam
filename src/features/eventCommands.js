@@ -17,5 +17,10 @@ function registerEventCommandListeners(){
     }
 }
 
+// Mouse events should trigger command events
+document.addEventListener("click", function(e){
+    event.emit("click");
+});
+
 // Run this on startup
 registerEventCommandListeners();
