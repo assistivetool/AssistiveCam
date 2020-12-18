@@ -2,12 +2,14 @@ var guiConfig = [
     {
         "label": "Zoom in",
         "picture": "gui/assets/zoom-in.png",
-        "command": "zoom in"
+        "command": "zoom in",
+        "property": "stepless"
     },
     {
         "label": "Zoom out",
         "picture": "gui/assets/zoom-out.png",
-        "command": "zoom out"
+        "command": "zoom out",
+        "property": "stepless"
     },
     {
         "label": "Cycle filter profiles",
