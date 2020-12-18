@@ -94,7 +94,13 @@ function resetZoom(){
 //Mousehweel zooming
 document.addEventListener("wheel", function(event){
     // Only act when the option for this is enabled
-    if(config["mousewheel-zoom"]){
+    // Do not do anything when modifiers are pressed
+    // Otherwise this would conflict with other things maybe
+    if (config["mousewheel-zoom"] &&
+        !event.shiftKey &&
+        !event.altKey &&
+        !event.ctrlKey &&
+        !event.metaKey){
         if(event.deltaY > 0){
             zoomOut();
         } else {
