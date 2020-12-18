@@ -38,6 +38,7 @@ var config = {
     },
     "tts": true,
     "tts-command": "spd-say -r 90",
+    "mousewheel-zoom": true,
     "node-binary": "/usr/bin/nodejs",
     "events": {}
 }

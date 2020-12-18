@@ -90,3 +90,15 @@ function resetZoom(){
     verticalOffset = 0.5;
     changeZoomLevel();
 }
+
+//Mousehweel zooming
+document.addEventListener("wheel", function(event){
+    // Only act when the option for this is enabled
+    if(config["mousewheel-zoom"]){
+        if(event.deltaY > 0){
+            zoomOut();
+        } else {
+            zoomIn();
+        }
+    }
+});
