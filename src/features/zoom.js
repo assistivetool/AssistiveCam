@@ -13,7 +13,7 @@ function changeZoomLevel(level = zoomLevel){
         event.emit("zoom", level);
 
         ctx.setTransform(1, 0, 0, 1, 0, 0);
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        //ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.translate(canvas.width * horizontalOffset, canvas.height * verticalOffset);
         ctx.scale(level, level);
         ctx.translate(-canvas.width * horizontalOffset, -canvas.height * verticalOffset);

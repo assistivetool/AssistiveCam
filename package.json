@@ -1,6 +1,6 @@
 {
   "name": "assistivecam",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Camera viewer for visually impaired people",
   "main": "app.js",
   "devDependencies": {
@@ -31,12 +31,18 @@
     "shelljs": "^0.8.3"
   },
   "build": {
-	  "appId": "eu.nwng.assistivecam",  
-	  "linux": {
-		  "icon": "assets/snapIcon.png"
-  	},
-	  "snap": {
-		  "plugs": ["default", "camera", "audio-record", "audio-playback", "home"]
-  	} 
+    "appId": "eu.nwng.assistivecam",
+    "linux": {
+      "icon": "assets/snapIcon.png"
+    },
+    "snap": {
+      "plugs": [
+        "default",
+        "camera",
+        "audio-record",
+        "audio-playback",
+        "home"
+      ]
+    }
   }
 }
