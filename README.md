@@ -27,8 +27,6 @@ As of August 2020, AssistiveCam is distributed through Snapcraft! Install it on 
 snap install assistivecam
 ```
 
-At the moment, it is neccessary that you grant permissions to use the camera manually when using the snap.
-
 ## Default shortcuts
 
 * ```:``` to bring up a command prompt, like in the vim editor
@@ -50,3 +48,9 @@ You may use the arrow keys to change the zoom region or the position of the alig
 ## List of commands
 
 To see an up-to-date list of commands, check out [the command documentation!](COMMANDS.md)
+
+## Code style and contributions
+
+AssistiveCam's code is very hacky - this is intentional design to get new users familiar with the code and the provided functionality quickly. This allows for the easiest possible extension and configuration of the software for ones personal preference. No other software provides this and I deem it neccessary. 
+
+Please contribute all your changes back to the project and make them configurable via config.js. You'll be helping many visually impaired users all over the world! <3
