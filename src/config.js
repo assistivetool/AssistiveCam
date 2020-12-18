@@ -1,7 +1,7 @@
 var config = {
     "defaults": {
-        "in": 0.2,
-        "out": 0.2,
+        "in": 0.1,
+        "out": 0.1,
         "max": 12,
         "horizontal": 0.05,
         "vertical": 0.05
