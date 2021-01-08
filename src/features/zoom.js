@@ -12,6 +12,13 @@ function changeZoomLevel(level = zoomLevel){
 
         event.emit("zoom", level);
 
+        // If we reach zoom level 1.0 again, reset offsets to center
+        // But only do this if it's configured
+        if(level <= 1.0 && !config["keep-zoom-offset"]){
+            horizontalOffset = 0.5;
+            verticalOffset = 0.5;
+        }
+
         ctx.setTransform(1, 0, 0, 1, 0, 0);
         //ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.translate(canvas.width * horizontalOffset, canvas.height * verticalOffset);
