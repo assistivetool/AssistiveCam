@@ -52,6 +52,16 @@ function zoomOut(){
 // Change the offset while zoomed, enlarge different parts
 function moveHorizontal(left = true){
     // Determine the destination to move into
+    
+    // Respect mirroring and move into the correct visible direction
+    // if that is configured. Ignoring this would move the view
+    // in the opposite direction
+    if(mirrored && left && config["move-mirrored-visually"]){
+        left = false;
+    } else if(mirrored && !left && config["move-mirrored-visually"]){
+        left = true;
+    }
+
     if(left){
         var newValue = horizontalOffset - config["defaults"]["horizontal"];
     } else {
