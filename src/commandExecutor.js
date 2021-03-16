@@ -226,6 +226,10 @@ function executeCommand(action){
             case 'exit':
             case 'quit':
             case 'q':
+            case 'q!':
+            case 'wq':
+            case 'wq!':
+            case 'x':
                 window.close();
             break;
             case 'webhook':
