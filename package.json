@@ -4,7 +4,7 @@
   "description": "Camera viewer for visually impaired people",
   "main": "app.js",
   "devDependencies": {
-    "electron": "^7.2.4",
+    "electron": "^9.4.0",
     "electron-builder": "^22.8.0",
     "electron-packager": "^13.1.0"
   },
