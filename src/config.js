@@ -42,9 +42,9 @@ var config = {
     "keep-zoom-offset": false,
     "move-mirrored-visually": true,
     "thresholdFunction": {
-        "foreground": "000000",
-        "background": "FF0000",
-        "threshold": 100
+        "foreground": "yellow",
+        "background": "black",
+        "threshold": 170
     },
     "node-binary": "/usr/bin/nodejs",
     "events": {

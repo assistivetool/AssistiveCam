@@ -7,12 +7,11 @@ setForegroundThresholdColor(config["thresholdFunction"]["foreground"]);
 setBackgroundThresholdColor(config["thresholdFunction"]["background"]);
 
 function setForegroundThresholdColor(hex){
-    foregroundThresholdColor = hexToRGB(hex);
-    console.log(foregroundThresholdColor);
+    foregroundThresholdColor = stringToRGB(hex);
 }
 
 function setBackgroundThresholdColor(hex){
-    backgroundThresholdColor = hexToRGB(hex);
+    backgroundThresholdColor = stringToRGB(hex);
 }
 
 // This code was partially stolen from Roko C. Buljan on StackOverflow: https://stackoverflow.com/a/37512944
@@ -31,7 +30,7 @@ function applyThresholdFunction(){
             d.data[i] = d.data[i+1] = d.data[i+2] = d.data[i+1] > thresholdFunctionThreshold ? 0 : 255;
         
             // Recolor pixels
-            if(d.data[i] === 0){
+            if(d.data[i] === 255){
                 d.data[i] = foregroundThresholdColor[0];
                 d.data[i+1] = foregroundThresholdColor[1];
                 d.data[i+2] = foregroundThresholdColor[2];
@@ -43,6 +42,17 @@ function applyThresholdFunction(){
         }
 
         ctx.putImageData(d, 0, 0);
+    }
+}
+
+// Accepts a string and converts it to an RGB array
+function stringToRGB(color){
+    if(color[0] != "#"){
+        var cn = document.createElement("canvas").getContext("2d");
+        cn.fillStyle = color;
+        return hexToRGB(cn.fillStyle);
+    } else {
+        return hexToRGB(color);
     }
 }
 
