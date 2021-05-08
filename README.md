@@ -42,6 +42,7 @@ snap install assistivecam
 * ```l``` to toggle an alignment help
 * ```g``` to toggle the gui
 * ```t``` to toggle text-to-speech output
+* ```d``` to toggle the threshold filter and make the image two-color (text mode)
 
 You may use the arrow keys to change the zoom region or the position of the alignment help when it's activated.
 

@@ -258,6 +258,7 @@ function executeCommand(action){
                 }
             break;
             case "threshold":
+            case "text":
             case "t":
             case "twocolor":
                 switch(command[1]){
@@ -265,15 +266,22 @@ function executeCommand(action){
                     case "f":
                     case "front":
                         if(command[2] != null){
-                            foregroundThresholdColor = command[2];
+                            setForegroundThresholdColor(command[2]);
                         }
                     break;
                     case "background":
                     case "b":
                     case "back":
                         if(command[2] != null){
-                            backgroundThresholdColor = command[2];
+                            setBackgroundThresholdColor(command[2]);
                         }
+                    break;
+                    case "switch":
+                    case "swap":
+                    case "s":
+                        let backupThresholdForeground = foregroundThresholdColor;
+                        foregroundThresholdColor = backgroundThresholdColor;
+                        backgroundThresholdColor = backupThresholdForeground;
                     break;
                     default:
                         if(command[1] == null){

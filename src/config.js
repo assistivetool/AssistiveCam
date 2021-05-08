@@ -21,6 +21,7 @@ var config = {
         "g": "gui",
         "t": "tts",
         "m": "mirror",
+        "d": "threshold",
         "ArrowDown": "line next&&zoom down key",
         "ArrowUp": "line previous&&zoom up key",
         "ArrowLeft": "zoom left",
@@ -41,9 +42,9 @@ var config = {
     "keep-zoom-offset": false,
     "move-mirrored-visually": true,
     "thresholdFunction": {
-        "foreground": "black",
-        "background": "yellow",
-        "threshold": 150
+        "foreground": "000000",
+        "background": "FF0000",
+        "threshold": 100
     },
     "node-binary": "/usr/bin/nodejs",
     "events": {

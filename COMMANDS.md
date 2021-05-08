@@ -6,6 +6,7 @@ AssistiveCam is controlled by commands. Simple keyboard shortcuts for all comman
 |-------------------------------|---------------|-------------------------------|
 | command                       |               | Show a command prompt         |
 | zoom <level/in/out>           | z <level/i/o> | Zoom into the image           |
+| text [value/foreground/background/swap] [color] | t [value|f|b|s] [color] | Toggle/Configure text mode |
 | freeze [seconds]              | fr            | Freeze the image              |
 | snapshot                      | snap          | Save a snapshot to disk       |
 | rotate                        | r             | Rotate the view by 90 degrees |
