@@ -257,6 +257,35 @@ function executeCommand(action){
                     changeInfoText("Delay not specified");
                 }
             break;
+            case "threshold":
+            case "t":
+            case "twocolor":
+                switch(command[1]){
+                    case "foreground":
+                    case "f":
+                    case "front":
+                        if(command[2] != null){
+                            foregroundThresholdColor = command[2];
+                        }
+                    break;
+                    case "background":
+                    case "b":
+                    case "back":
+                        if(command[2] != null){
+                            backgroundThresholdColor = command[2];
+                        }
+                    break;
+                    default:
+                        if(command[1] == null){
+                            // Toggle threshold function
+                            thresholdFunctionActive = !thresholdFunctionActive;
+                        } else {
+                            // Set threshold value
+                            thresholdFunctionThreshold = Number(command[1]);
+                        }
+                    break;
+                }
+            break;
             default:
                 // Check if there's an alias set
                 if(config["aliasCommands"][command[0]]){

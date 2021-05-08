@@ -24,6 +24,7 @@ feed.addEventListener('play', function() {
   (function loop() {
     if (!$this.paused && !$this.ended) {
         ctx.drawImage($this, 0, 0);
+        applyThresholdFunction();
         setTimeout(loop, 1000 / 30); // drawing at 30fps
     }
   })();

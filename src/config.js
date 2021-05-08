@@ -40,6 +40,11 @@ var config = {
     "mousewheel-zoom": true,
     "keep-zoom-offset": false,
     "move-mirrored-visually": true,
+    "thresholdFunction": {
+        "foreground": "black",
+        "background": "yellow",
+        "threshold": 150
+    },
     "node-binary": "/usr/bin/nodejs",
     "events": {
         "click": "gui"

@@ -7,7 +7,8 @@ var verticalOffset = 0.5;
 // Centerzoom by default
 function changeZoomLevel(level = zoomLevel){
     // Only change the zoom level if image is not freeze
-    if(inFreeze === false){
+    // Can change if the zoom level does not change
+    if(inFreeze === false || level == zoomLevel){
         level = Number(Number(level).toPrecision(2));
 
         event.emit("zoom", level);
@@ -20,12 +21,13 @@ function changeZoomLevel(level = zoomLevel){
         }
 
         ctx.setTransform(1, 0, 0, 1, 0, 0);
-        //ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.translate(canvas.width * horizontalOffset, canvas.height * verticalOffset);
         ctx.scale(level, level);
         ctx.translate(-canvas.width * horizontalOffset, -canvas.height * verticalOffset);
         zoomLevel = level;
         changeInfoText("Zoom level: " + zoomLevel);
+
+        applyThresholdFunction();
     }
 }
 
