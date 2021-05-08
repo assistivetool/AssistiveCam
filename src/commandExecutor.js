@@ -287,6 +287,7 @@ function executeCommand(action){
                         if(command[1] == null){
                             // Toggle threshold function
                             thresholdFunctionActive = !thresholdFunctionActive;
+                            applyThresholdFunction();
                         } else {
                             // Set threshold value
                             thresholdFunctionThreshold = Number(command[1]);
